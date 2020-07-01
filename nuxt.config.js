@@ -6,8 +6,8 @@ export default {
      ** Headers of the page
      */
     head: {
-        titleTemplate: "%s - " + process.env.npm_package_name,
-        title: process.env.npm_package_name || "",
+        titleTemplate: "Din Ashkenazi Portfolio - UI UX & Web Designer",
+        title: "Din Ashkenazi Portfolio - UI UX & Web Designer",
         meta: [{
                 charset: "utf-8"
             },
@@ -18,7 +18,7 @@ export default {
             {
                 hid: "description",
                 name: "description",
-                content: process.env.npm_package_description || ""
+                content: "This is my UI UX & Web design Portfolio, I have 6 years of experience of web design and developement as well as graphic design and visualization "
             }
         ],
         link: [{
@@ -55,8 +55,12 @@ export default {
     buildModules: [
         // Doc: https://github.com/nuxt-community/eslint-module
         //"@nuxtjs/eslint-module",
-        "@nuxtjs/vuetify"
+        "@nuxtjs/vuetify",
+        '@nuxtjs/google-analytics'
     ],
+    googleAnalytics: {
+        id: 'UA-89031274-13'
+    },
     /*
      ** Nuxt.js modules
      */

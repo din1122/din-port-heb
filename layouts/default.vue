@@ -3,12 +3,24 @@
     <div ref="circle" class="circle"></div>
     <div ref="circleFollow" class="circle-follow"></div>
 
-    <Header />
+    <Header v-on:open-drawer="drawer = !drawer" />
     <v-layout wrap :class="[currentPage == '/' ? activeClass : '']">
       <v-flex xl9 md10 sm11 ma-auto>
         <nuxt />
         <Footer />
       </v-flex>
+
+      <v-navigation-drawer width="208" v-model="drawer" absolute temporary>
+        <v-list dense>
+          <v-list-item class="text-center drawer-list" v-for="link in links" :key="link.title">
+            <v-list-item-content>
+              <nuxt-link :to="link.url">
+                <v-list-item-title>{{link.title}}</v-list-item-title>
+              </nuxt-link>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
+      </v-navigation-drawer>
     </v-layout>
     <FixedContact />
   </v-app>
@@ -21,7 +33,13 @@ import Header from "~/components/header.vue";
 export default {
   data() {
     return {
-      activeClass: "bg-image"
+      links: [
+        { url: "/", title: "Home" },
+        { url: "/about", title: "About" },
+        { url: "/contact", title: "Contact" }
+      ],
+      activeClass: "bg-image",
+      drawer: false
     };
   },
   computed: {

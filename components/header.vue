@@ -1,12 +1,13 @@
 <template>
-  <v-app-bar flat fixed class="app-bar">
+  <v-app-bar dense flat fixed class="app-bar" height="67px">
     <nuxt-link to="/">
-      <v-toolbar-title ma-3>
-        <img height="75px" src="/logo.png" /> </v-toolbar-title
-    ></nuxt-link>
+      <v-toolbar-title>
+        <img height="75px" src="/logo.png" />
+      </v-toolbar-title>
+    </nuxt-link>
     <v-spacer></v-spacer>
     <div>
-      <Menu />
+      <Menu v-on:open-drawer="$emit('open-drawer')" />
     </div>
   </v-app-bar>
 </template>
@@ -21,10 +22,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.app-bar {
-  margin: 13px !important;
-  background: transparent !important;
-}
 .v-toolbar__title {
   margin-left: -10%;
 }

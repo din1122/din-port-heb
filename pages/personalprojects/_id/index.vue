@@ -8,9 +8,9 @@
       </transition>
 
       <v-layout wrap row align-center fill-height>
-        <v-flex xl12 xs10 ma-auto>
+        <v-flex xl12 xs10 sm12 ma-auto>
           <v-layout wrap class="porject-layout">
-            <v-flex xl6 align-self-center>
+            <v-flex xl5 md5 align-self-center>
               <v-layout column>
                 <v-flex>
                   <v-card
@@ -37,7 +37,7 @@
                 </v-flex>
               </v-layout>
             </v-flex>
-            <v-flex xl6 align-self-center>
+            <v-flex xl7 md7 align-self-center>
               <v-card class="card--transparent" flat width="80%">
                 <p>
                   {{ content }}

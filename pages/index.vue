@@ -2,7 +2,7 @@
   <v-container fluid>
     <section class="home">
       <v-layout wrap fill-height>
-        <v-flex xl5 md8 align-end d-flex class="left-home">
+        <v-flex xl5 lg5 md8 align-end d-flex class="left-home">
           <v-card flat class="home-text-card" style="background:transparent;">
             <div class="d-block">
               <span class="span-title">DIN ASHKENAZI</span>
@@ -30,7 +30,7 @@
             </div>
           </v-card>
         </v-flex>
-        <v-flex xl7 xs12 md12 @mouseenter="hover = true" class="right-home">
+        <v-flex xl7 xs12 md12 lg7 @mouseenter="hover = true" class="right-home">
           <div class="backdrop-img" :class="{ backdropactive: hover }"></div>
           <v-lazy
             :options="{
@@ -41,7 +41,6 @@
           >
             <v-img
               class="profile-img"
-              :position="{}"
               src="/photos/profile-pic.png"
             ></v-img>
           </v-lazy>

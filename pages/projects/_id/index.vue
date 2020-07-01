@@ -8,7 +8,7 @@
       </transition>
 
       <v-layout wrap row align-center fill-height>
-        <v-flex xl12 xs10 ma-auto>
+        <v-flex xl12 xs10 sm12 ma-auto>
           <v-layout wrap class="porject-layout">
             <v-flex xl5 md5 align-self-center>
               <v-layout column>
