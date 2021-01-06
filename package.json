@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@nuxtjs/google-analytics": "^2.3.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "express": "^4.17.1",
     "gsap": "^3.2.6",
     "nodemailer": "^6.4.6",
